@@ -14,7 +14,7 @@ export const Contact = () => {
     message: ''
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Enviar');
+  // const [buttonText, setButtonText] = useState('Enviar');
   const [status, setStatus] = useState({});
   
   // Define useRef for form
@@ -78,7 +78,7 @@ export const Contact = () => {
                       </Col> */}
                       <Col size={12} className="px-1">
                         <textarea rows="6" name="message" value={formDetails.message} placeholder="Mensaje" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                        <button type="submit"><span>{buttonText}</span></button>
+                        <button type="submit"><span>Enviar</span></button>
                       </Col>
                     
                     </Row>

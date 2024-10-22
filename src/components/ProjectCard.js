@@ -3,9 +3,9 @@ import { Col } from "react-bootstrap";
 export const ProjectCard = ({ title, description, imgUrl, url }) => {
   return (
     <Col size={12} sm={6} md={4}>
-      <a target="_blank" href={url}>
+      <a target="_blank" href={url} rel="noopener noreferrer">
         <div className="proj-imgbx">
-          <img src={imgUrl} />
+          <img src={imgUrl} alt={title} /> {/* Agregué el alt para la imagen */}
           <div className="proj-txtx">
             <h4>{title}</h4>
             <span>{description}</span>
@@ -13,5 +13,5 @@ export const ProjectCard = ({ title, description, imgUrl, url }) => {
         </div>
       </a>
     </Col>
-  )
-}
+  );
+};
